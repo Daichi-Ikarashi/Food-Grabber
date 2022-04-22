@@ -13,8 +13,6 @@ const Top = () => {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
     });
-
-    // aaa();
   }
 
   // 取得に失敗した場合の処理
@@ -22,9 +20,6 @@ const Top = () => {
     console.log("位置情報が取得できませんでした");
   }
 
-  const aaa = () => {
-    console.log(location);
-  };
   return (
     <div className="main-container">
       <h1>Food Grabber</h1>
