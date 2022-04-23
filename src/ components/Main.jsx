@@ -20,14 +20,13 @@ const Main = () => {
 
   const handleChange = (e) => {
     setRange({ range: Number(e.target.value) });
+    callApi();
   };
 
-  const [shopData, setShopData] = useState({
-    shopName: "",
-    shopInfo: { access: "", logo_image: "" },
-  });
+  const [shopData, setShopData] = useState({});
 
   const callApi = async () => {
+    console.log("call api");
     const url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
     await axios
       .get(url, {
@@ -43,13 +42,14 @@ const Main = () => {
           // 39.7766622, 141.1341492
           // 39.776655797331266, 141.13426742159413
           range: String(range.range),
-          count: "100",
+          count: "30",
           format: "jsonp",
         },
       })
       .then((res) => {
         const result = res.data.results;
         console.log(result);
+        setShopData(result);
       })
       .catch((err) => console.log(err));
   };
@@ -59,7 +59,6 @@ const Main = () => {
       <p>Main Screen</p>
       <p id="lat"></p>
       <p id="lng"></p>
-
       <p>検索範囲の選択</p>
       <select onChange={(e) => handleChange(e)} size={1}>
         <option value="0">選択してください</option>
@@ -69,8 +68,7 @@ const Main = () => {
         <option value="4">2km</option>
         <option value="5">3km</option>
       </select>
-      <button onClick={callApi()}>検索</button>
-      <SeachResult />
+      <SeachResult shopData={shopData} />
     </div>
   );
 };
