@@ -5,13 +5,14 @@ import Main from "./ components/Main";
 import ShopDetail from "./ components/ShopDetail";
 import NoMatch from "./ components/NoMatch";
 import Credit from "./ components/Credit";
+import "./assets/style.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/Top" element={<Top />} />
+          <Route exact path="/" element={<Top />} />
           <Route path="/Main" element={<Main />} />
           <Route path="/ShopDetail" element={<ShopDetail />} />
           <Route path="*" element={<NoMatch />} />

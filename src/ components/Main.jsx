@@ -52,8 +52,6 @@ const Main = () => {
           setResultData({ err: true });
         }
         if (res.state !== 200) {
-          console.log("ヒット");
-          console.log(res.data);
           setResultData({ data: res.data.results, err: false });
         }
       })
@@ -87,7 +85,7 @@ const Main = () => {
         <p>位置情報の取得に失敗しました...</p>
         <p>Topへ戻るボタンを押してください</p>
         <button>
-          <Link to={`/Top`}>Topへ戻る</Link>
+          <Link to={`/`}>Topへ戻る</Link>
         </button>
       </div>
     );
