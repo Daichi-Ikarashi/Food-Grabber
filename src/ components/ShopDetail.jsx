@@ -1,22 +1,19 @@
-import { Link } from "react-router-dom";
-
 const ShopDetail = (props) => {
-  console.log(props.handleBackDetail);
-  console.log(props.clickedShop);
-  const shopData = props.clickedShop.shopDetail;
-  const displayFlag = props.clickedShop.display;
+  // 親のshopDetailステートを取得
+  const displayFlag = props.state.display;
+
+  const detailData = props.state.detailData;
   if (displayFlag) {
+    console.log(detailData);
     return (
       <div>
-        <h2>店舗詳細</h2>
-        <div>
-          <p>「{shopData.name}」</p>
-          <p>住所:{shopData.address}</p>
-          <p>営業時間:{shopData.open}</p>
-          <p>定休日:{shopData.close}</p>
-          <img src={shopData.photo.pc.l} alt="店の写真" />
-          <button onClick={() => props.handleBackDetail()}>戻る</button>
-        </div>
+        <p>「{detailData.name}」</p>
+        <p>ジャンル:{detailData.genre.name}</p>
+        <p>住所:{detailData.address}</p>
+        <p>営業時間:{detailData.open}</p>
+        <p>定休日:{detailData.close}</p>
+        <img src={detailData.photo.pc.l} alt="店の写真" />
+        <button onClick={() => props.handleBackDetail()}>戻る</button>
       </div>
     );
   } else {
