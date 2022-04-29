@@ -35,10 +35,8 @@ const Main = () => {
         adapter: axiosJsonpAdapter,
         params: {
           key: process.env.REACT_APP_API_KEY,
-          lat: "34.67",
-          lng: "135.52",
-          // lat: location.latitude,
-          // lng: location.longitude,
+          lat: location.latitude,
+          lng: location.longitude,
           range: range.value,
           count: "30",
           format: "jsonp",
