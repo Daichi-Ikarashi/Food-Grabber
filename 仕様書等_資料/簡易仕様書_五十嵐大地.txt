@@ -19,10 +19,10 @@ CSSを書く余裕がなく、デザインは拘れなかったが、
 ユーザーが操作に迷わないように、UIの表示タイミングを設定し、直感的に操作できるように
 処理の流れを工夫した。
 
-### 公開したアプリの URL（Store にリリースしている場合）
+### 公開したアプリの URL（firebase deploy）
 https://food-grabber-77dc7.web.app
 
-### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）
+### 該当プロジェクトのリポジトリ URL（GitHub）
 https://github.com/Daichi-Ikarashi/Food-Grabber/
 
 ## 開発環境
@@ -33,9 +33,6 @@ VSCode 1.66.2
 JavaScript
 HTML/CSS
 (React)
-
-## 動作対象端末・OS
-
 
 ### 動作対象OSブラウザ
 Chrome 100.0.4896.88
