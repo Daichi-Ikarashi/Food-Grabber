@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## Food Grabber
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### overview
+手軽に現在地周辺の飲食店を見つけられるアプリ
 
-## Available Scripts
+### 開発期間
+10日間
 
-In the project directory, you can run:
+### こだわったポイント
+reactを使用したSPAアプリにより、スラスラ遷移するアプリにした
 
-### `npm start`
+### こだわったポイント（デザイン）
+CSSを書く余裕がなく、デザインは拘れなかったが、
+ユーザーが操作に迷わないように、UIの表示タイミングを設定し、直感的に操作できるように
+処理の流れを工夫した。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 公開したアプリの URL (firebase deploy)
+https://food-grabber-77dc7.web.app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 開発環境
 
-### `npm test`
+### 開発環境
+VSCode 1.66.2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 開発言語
+JavaScript
+HTML/CSS
+(React)
 
-### `npm run build`
+### 動作対象OSブラウザ
+Chrome 100.0.4896.88
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## アプリケーション機能
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 機能一覧
+- レストラン検索：ぐるなびAPIを使用して、現在地周辺の飲食店を検索する。
+- レストラン情報取得：ぐるなびAPIを使用して、飲食店の詳細情報を取得する。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 画面一覧
+- トップ画面 ：位置情報の取得の許可をする
+- メイン画面 ：検索範囲を指定して飲食店を検索する
+- 一覧画面 ：検索結果の飲食店を一覧表示する
+- 店舗詳細画面 ：クリックした店舗の詳細情報を表示する
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 使用しているAPI,SDK,ライブラリなど
+- ぐるなびAPI
+- axio 0.26.1（HTTP通信ライブラリ）
+- axios-jsonp 1.0.4
+- react-dom 18.0.0
+- React 18.0.0
