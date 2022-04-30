@@ -1,6 +1,7 @@
 ## Food Grabber
 
-### overview
+## overview
+ホットペッパーグルメAPIを利用した
 手軽に現在地周辺の飲食店を見つけられるアプリ
 
 ### 開発期間
